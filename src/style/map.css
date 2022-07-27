@@ -1,0 +1,297 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.zoom {
+    position: fixed;
+    top: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+
+.zoom div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.zoom div svg {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+}
+
+.zoom div svg:hover {
+    background-color: lightgray;
+}
+
+.filter {
+    position: fixed;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    height: calc(100vh - 60px);
+    background-color: white;
+}
+
+.filter .check .sect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.filter .check .sect label {
+    width: 100%;
+    padding: 1rem 0;
+    text-transform: uppercase;
+    font-size: 12px;
+    border-bottom: 1px solid lightgray;
+}
+
+.filter .check .sect .choice {
+    display: flex;
+    padding: 1rem 0;
+}
+
+.filter .check .sect .choice input {
+    width: 30px;
+    height: 30px;
+}
+
+.one {
+    background-color: gold;
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+    margin-right: 2rem;
+}
+
+.two {
+    background-color: tomato;
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+    margin-right: 2rem;
+}
+
+.three {
+    background-color: darkmagenta;
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+    margin-right: 2rem;
+}
+
+.filter .search {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+.filter .search input {
+    padding: 10px;
+    border-radius: 10px;
+    outline: 0;
+    border: 1px solid black;
+}
+
+.filter .search button {
+    cursor: pointer;
+    background: rgb(0,177,255);
+    background: linear-gradient(90deg, rgba(0,177,255,1) 0%, rgba(88,58,172,1) 50%, rgba(255,0,61,1) 100%);
+    border: 0;
+    outline: 0;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+    margin-top: 1rem;
+}
+
+.cont {
+    margin-top: 120px;
+}
+
+.cont .tortoise {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(76, 20px);
+    grid-template-rows: repeat(76, 20px);
+    grid-gap: 1px;
+    width: fit-content;
+    height: fit-content;
+    background-color: dodgerblue;
+    border: 1px solid dodgerblue;
+}
+
+.cont .tortoise .cell {
+    background-color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    font-size: 6px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.cont .tortoise .cell:hover {
+    background-color: yellow;
+}
+
+.cont .tortoise .part {
+    background-color: #fc8803;
+}
+
+.cont .tortoise .main {
+    background-color: skyblue;
+}
+
+.sidebar {
+    width: 300px;
+    height: calc(100vh - 60px);
+    background-color: white;
+    position: fixed;
+    top: 60px;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.sidebar .close {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sidebar .close img {
+    cursor: pointer;
+    width: 30px;
+    margin: 10px;
+    background-color: gainsboro;
+    padding: 5px;
+    border-radius: 50px;
+}
+
+.sidebar .info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar .info .image {
+    width: 260px;
+    height: 260px;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
+
+.sidebar .info .image .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar .info .image .swiper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    padding: 2rem;
+}
+
+.sidebar .info .title {
+    margin-top: 2rem;
+}
+
+.sidebar .info .location {
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.sidebar button {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    right: 2rem;
+    cursor: pointer;
+    background: rgb(0,177,255);
+    background: linear-gradient(90deg, rgba(0,177,255,1) 0%, rgba(88,58,172,1) 50%, rgba(255,0,61,1) 100%);
+    border: 0;
+    outline: 0;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+    margin-top: 1rem;
+}
+
+.slide-right {
+	-webkit-animation: slide-right 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-right 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slide-left {
+	-webkit-animation: slide-left 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-left 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-right {
+    0% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(300px);
+                transform: translateX(300px);
+    }
+    }
+    @keyframes slide-right {
+    0% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(300px);
+                transform: translateX(300px);
+    }
+}
+
+@-webkit-keyframes slide-left {
+    0% {
+      -webkit-transform: translateX(300px);
+              transform: translateX(300px);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+  @keyframes slide-left {
+    0% {
+      -webkit-transform: translateX(300px);
+              transform: translateX(300px);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+}
